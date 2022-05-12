@@ -1,0 +1,15 @@
+.AlbumList caption {
+    font-weight: bolder;
+}
+
+table {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.AlbumList td:first-child {width: 6%;}
+.AlbumList td:first-child + td {width: 84%;}
+.AlbumList caption {
+    text-align: left;
+    margin-bottom: 1.3rem;
+}

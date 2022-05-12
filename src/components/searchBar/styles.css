@@ -1,0 +1,33 @@
+.Container-SearchBar {
+    color: rgb(98, 98, 98);
+}
+
+.Container-SearchBar fieldset{
+    display: flex;
+    align-items: center;
+}
+
+.Container-SearchBar input {
+    border: none;
+    border-radius: 30px;
+    height: 3rem;
+    flex: 1;
+    margin: 5px 5px 5px 0;
+    padding: 1.5rem;
+}
+
+.Container-SearchBar button {
+    border: none;
+    height: 3rem;
+    width: 20%;
+    border-radius: 30px;
+    background-color: #0A95FF;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.Container-SearchBar button:hover {
+    /* background-color: #076ab6; */
+    background-color: #4ab1ff;
+}
