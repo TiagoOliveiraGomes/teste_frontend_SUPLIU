@@ -4,17 +4,21 @@ import { GetAlbums } from "../../utils/GetAlbums";
 
 import "./styles.css";
 
-export function AlbumList() {
+export function AlbumList(props) {
   const [albumList, setAlbumList] = useState(null)
   const [tableElements, setTableElements] = useState(null)
+  const {searchTerm, pressSearchButton} = props
   
   useEffect(()=> {
-    GetAlbums({albumList, setAlbumList})
+    let isRendering = true
+    isRendering && GetAlbums({albumList, setAlbumList})
 
-    if(!albumList) return
+    if(albumList){
+      isRendering && CreatingElementsForTable({albumList, setTableElements, searchTerm})
+    }
 
-    CreatingElementsForTable({albumList, setTableElements})
-  }, [albumList])
+    return () => isRendering= false
+  }, [albumList, pressSearchButton])
 
   return (
     <div className="AlbumList">
