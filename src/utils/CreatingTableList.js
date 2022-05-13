@@ -1,6 +1,12 @@
 
-export function CreatingElementsForTable ({albumList, setTableElements}) {
-    const list = albumList.map(item => {
+export function CreatingElementsForTable ({albumList, setTableElements, searchTerm}) {
+    const list = albumList.filter( item => {
+        if(searchTerm == ""){
+            return item
+        } else if (item.name.toLowerCase().includes(searchTerm.toLowerCase())){
+            return item
+        }
+    }).map(item => {
       return(
         <table key={item.id}>
             <caption>Álbum: {item.name}, {item.year}</caption>
