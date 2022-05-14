@@ -1,7 +1,7 @@
 
 export function CreatingElementsForTable ({albumList, setTableElements, searchTerm}) {
     const list = albumList.filter( item => {
-        if(searchTerm == ""){
+        if(searchTerm === ""){
             return item
         } else if (item.name.toLowerCase().includes(searchTerm.toLowerCase())){
             return item

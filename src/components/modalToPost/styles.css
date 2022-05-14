@@ -1,0 +1,51 @@
+.Container-ModalToPost{
+    background-color: #fff;
+    width: 60%;
+    height: 50%;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    border-radius: 2%;
+    box-shadow: rgba(0, 0, 0, 0.314) 5px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.Container-ModalToPost  .title {
+    position: absolute;
+    top: 0;
+    margin-top: 1rem;
+}
+
+.Container-ModalToPost legend{
+    margin-bottom: 0.3rem;
+}
+
+.Container-ModalToPost button {
+    border: none;
+    height: 3rem;
+    width: 20%;
+    border-radius: 30px;
+    background-color: #0A95FF;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 4px;
+}
+.Container-ModalToPost button:hover {
+    background-color: #4ab1ff;
+}
+
+.btn_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem !important;
+    height: 2rem !important;
+    padding: 0 0.5rem 0 0.5rem;
+    background-color: rgb(241, 91, 91) !important;
+    margin: 1rem;
+
+}

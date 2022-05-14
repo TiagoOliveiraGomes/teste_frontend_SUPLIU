@@ -1,0 +1,21 @@
+.Container-AddButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 2rem;
+    border: none;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: #0A95FF;
+    color: rgb(231, 231, 231);
+    cursor: pointer;
+    margin-left: 4px;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.Container-AddButton:hover {
+    background-color: #27dc8d;
+}
+
+/* #0A95FF */
+/* #09c372 */
