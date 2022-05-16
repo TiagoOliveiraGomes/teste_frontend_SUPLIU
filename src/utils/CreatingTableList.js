@@ -1,7 +1,13 @@
+
+import trashIcon from '../assets/images/trash.svg'
+
 export function CreatingElementsForTable({
   albumList,
   setTableElements,
   searchTerm,
+  setIsModalOpen,
+  setType,
+  setAlbum_id,
 }) {
   const list = albumList
     .filter((item) => {
@@ -13,12 +19,19 @@ export function CreatingElementsForTable({
     })
     .map((item) => {
       return (
-        <li>
-          <table key={item.id}>
-            <caption>
-              Álbum: {item.name}, {item.year}
-            <button className="btn-addTrack">+</button>
-            </caption>
+        <li key={item.id}>
+          <table>
+            
+              <caption>
+                Álbum: {item.name}, {item.year}
+              <button className="btn-delete"><img className='trashIcon' src={trashIcon} /></button>
+              <button onClick={()=>{
+                setType('track')
+                setIsModalOpen(true)
+                setAlbum_id(item.id)
+              }} className="btn-addTrack">+</button>
+              </caption>
+            
             <thead>
               <tr>
                 <th>N°</th>

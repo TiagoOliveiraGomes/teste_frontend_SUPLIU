@@ -1,6 +1,5 @@
 .AlbumList  li:hover{
-    outline: solid rgb(124, 124, 124) 1px;
-    border-radius: 5px;
+    background-color: rgba(124, 124, 124, 0.393);
 }
 
 .AlbumList caption {
@@ -18,21 +17,55 @@ table {
 .AlbumList caption {
     text-align: left;
     margin-bottom: 1.3rem;
+    position: relative;
 }
 
+.AlbumList tbody> tr:hover {
+    /* background-color: #16161682; */
+    outline: #0A95FF 2px solid;
+    cursor: pointer;
+}
 .btn-addTrack {
-    
-    width: 2rem ;
-    height: 2rem ;
-    padding: 0 0.5rem 0 0.5rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+
+    display: flex;
+    justify-content: center;
+    width: 1.6rem ;
+    height: 1.6rem ;
     background-color: #0A95FF;
     color: #fff;
-    margin: 1rem;
     border-radius: 30px;
     border: none;
     cursor: pointer;
+    text-align: center;
 }
 
 .btn-addTrack:hover {
     background-color: #4ab1ff;
+}
+
+.trashIcon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.btn-delete {
+    position: absolute;
+    top: 0.3rem;
+    right: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 1.6rem ;
+    height: 1.6rem ;
+    background-color: rgb(217, 57, 57);
+    border: none;
+    display: flex;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: rgb(201, 89, 89);
 }
