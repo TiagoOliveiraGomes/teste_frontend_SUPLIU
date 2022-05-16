@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { FilterAlbums } from '../../utils/FilterAlbums'
+import React from 'react'
 import './styles.css'
 
 export default function SearchBar(props) {
