@@ -1,9 +1,10 @@
 import React from 'react'
 import './styles.css'
 
-export function AddButton() {
+export function AddButton(props) {
+  const {isModalOpen, setIsModalOpen} = props
   return (
-    <button className='Container-AddButton'>
+    <button className='Container-AddButton' onClick={()=>setIsModalOpen(!isModalOpen)}>
         + Adicionar Album
     </button>
   )

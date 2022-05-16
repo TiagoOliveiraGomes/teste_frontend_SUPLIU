@@ -1,32 +1,56 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { PostAlbums } from '../../utils/PostAlbums'
+import { CloseButton } from '../CloseButton'
 import './styles.css'
 
 export function ModalToPost(props) {
-    const {type} = props
+    const {type, isModalOpen, setIsModalOpen} = props
+    const [albumName, setAlbumName] = useState('')
+    const [AlbumYear, setAlbumYear] = useState(null)
+    const [modalElements, setModalElement] = useState(null)
+    
 
-    function verifyFormType (props){
+    useEffect(()=>{
+        if(!isModalOpen){
+            setModalElement(null)
+        }
+        verifyFormType()
+    },[isModalOpen])
+    
+    function PostAlbum (event) {
+        event.preventDefault()
+        PostAlbums(albumName, AlbumYear)
+    }
+
+    function verifyFormType (){
+        let element = null
         if(type==="album"){
-            return(
-                <form className='Container-ModalToPost' action="">
-                    <button className='btn_close'>X</button>
+                element = (<form className='Container-ModalToPost' action="">
+                        {/* <CloseButton isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} /> */}
+                        <button type='button' className='btn_close' onClick={()=>setIsModalOpen(false)}>X</button>
                         <h1 className='title'>Cadastro um novo álbum</h1>
                     <fieldset>
                         <legend>Nome</legend>
-                        <input type="text" />
+                        <input type="text" placeholder='Nome do álbum' onChange={event => setAlbumName(event.target.value)}/>
                     </fieldset>
                     <fieldset>
                         <legend>Ano</legend>
-                        <input type="text" />
+                        <input type="number" placeholder='Ano do álbum' onChange={event => setAlbumYear(+event.target.value)}/>
                     </fieldset>
-                    <button>Comfirmar</button>
-                </form>
-            )
+                    <button type='submit' onClick={(event)=>PostAlbum(event)}>Confirmar</button>
+                </form>)
+        }
+        if(isModalOpen){
+            setModalElement(element)
+        }else {
+            setModalElement(null)
         }
     }
 
   return (
     <div>
-        {verifyFormType()}
+        {modalElements}
     </div>
   )
 }
+

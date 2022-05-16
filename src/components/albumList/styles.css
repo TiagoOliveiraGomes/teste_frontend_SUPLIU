@@ -1,3 +1,8 @@
+.AlbumList  li:hover{
+    outline: solid rgb(124, 124, 124) 1px;
+    border-radius: 5px;
+}
+
 .AlbumList caption {
     font-weight: bolder;
 }
@@ -7,9 +12,27 @@ table {
     margin-top: 2rem;
 }
 
-.AlbumList td:first-child {width: 6%;}
-.AlbumList td:first-child + td {width: 84%;}
+.AlbumList th:first-child {width: 6%;}
+.AlbumList th:first-child + th {width: 84%;}
+.AlbumList th:first-child + th + th {width: 10%;}
 .AlbumList caption {
     text-align: left;
     margin-bottom: 1.3rem;
+}
+
+.btn-addTrack {
+    
+    width: 2rem ;
+    height: 2rem ;
+    padding: 0 0.5rem 0 0.5rem;
+    background-color: #0A95FF;
+    color: #fff;
+    margin: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-addTrack:hover {
+    background-color: #4ab1ff;
 }

@@ -23,9 +23,7 @@ export function AlbumList(props) {
   return (
     <div className="AlbumList">
       <ul>
-        <li>
           {tableElements? tableElements: null}
-        </li>
       </ul>
     </div>
   );
