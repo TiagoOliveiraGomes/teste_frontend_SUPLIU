@@ -1,11 +1,15 @@
 import './app.css'
 import { Container } from './components/container';
+import { ModalContextProvider } from './contexts/modalOpen';
+
 
 function App() {
   return (
-    <div className="App">
-      <Container />
-    </div>
+    <ModalContextProvider>
+      <div className="App">
+        <Container />
+      </div>
+    </ModalContextProvider>
   );
 }
 

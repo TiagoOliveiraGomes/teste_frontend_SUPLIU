@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { IsModalOpenContext } from "../../contexts/modalOpen";
 import { CreatingElementsForTable } from "../../utils/CreatingTableList";
 import { GetAlbums } from "../../utils/GetAlbums";
 
@@ -9,12 +10,16 @@ export function AlbumList(props) {
   const [tableElements, setTableElements] = useState(null)
   const {searchTerm, pressSearchButton} = props
   
+
+  const contextModal = useContext(IsModalOpenContext)
+  const {isModalOpen, setIsModalOpen, setType, setAlbum_id} = contextModal
+  
   useEffect(()=> {
     let isRendering = true
     isRendering && GetAlbums({albumList, setAlbumList})
 
     if(albumList){
-      isRendering && CreatingElementsForTable({albumList, setTableElements, searchTerm})
+      isRendering && CreatingElementsForTable({albumList, setTableElements, searchTerm, setIsModalOpen, setType, setAlbum_id})
     }
 
     return () => isRendering= false
