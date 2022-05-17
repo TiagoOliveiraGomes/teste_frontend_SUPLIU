@@ -8,7 +8,7 @@ import "./styles.css";
 export function AlbumList(props) {
   const [albumList, setAlbumList] = useState(null)
   const [tableElements, setTableElements] = useState(null)
-  const {searchTerm, pressSearchButton} = props
+  const {searchTerm, pressSearchButton, setIsModalQuestionOpen, setYesOptionInModal} = props
   
 
   const contextModal = useContext(IsModalOpenContext)
@@ -19,7 +19,7 @@ export function AlbumList(props) {
     isRendering && GetAlbums({albumList, setAlbumList})
 
     if(albumList){
-      isRendering && CreatingElementsForTable({albumList, setTableElements, searchTerm, setIsModalOpen, setType, setAlbum_id})
+      isRendering && CreatingElementsForTable({albumList, setTableElements, searchTerm, setIsModalOpen, setType, setAlbum_id, setIsModalQuestionOpen, setYesOptionInModal})
     }
 
     return () => isRendering= false

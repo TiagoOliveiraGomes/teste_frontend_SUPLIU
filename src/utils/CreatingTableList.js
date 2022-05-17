@@ -1,6 +1,7 @@
 
 import trashIcon from '../assets/images/trash.svg'
 import { DeleteAlbums } from './DeleteAlbum';
+import { DeleteTrack } from './DeleteTrack';
 
 export function CreatingElementsForTable({
   albumList,
@@ -9,6 +10,8 @@ export function CreatingElementsForTable({
   setIsModalOpen,
   setType,
   setAlbum_id,
+  setIsModalQuestionOpen,
+  setYesOptionInModal,
 }) {
   const list = albumList
     .filter((item) => {
@@ -47,7 +50,10 @@ export function CreatingElementsForTable({
                 var seconds = time - minutes * 60;
 
                 return (
-                  <tr key={element.id}>
+                  <tr onClick={()=> {
+                    setIsModalQuestionOpen(`Deletar a faixa: '${element.title}'?`)
+                    setYesOptionInModal(DeleteTrack(element.id))
+                  }} key={element.id}>
                     <td>{element.number}</td>
                     <td>{element.title}</td>
                     <td>
