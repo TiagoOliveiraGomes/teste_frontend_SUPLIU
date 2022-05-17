@@ -12,14 +12,14 @@ export function AlbumList(props) {
   
 
   const contextModal = useContext(IsModalOpenContext)
-  const {isModalOpen, setIsModalOpen, setType, setAlbum_id} = contextModal
+  const {isModalOpen, setIsModalOpen, setType, setAlbum_id, setTrack_id} = contextModal
   
   useEffect(()=> {
     let isRendering = true
     isRendering && GetAlbums({albumList, setAlbumList})
 
     if(albumList){
-      isRendering && CreatingElementsForTable({albumList, setTableElements, searchTerm, setIsModalOpen, setType, setAlbum_id, setIsModalQuestionOpen, setYesOptionInModal})
+      isRendering && CreatingElementsForTable({albumList, setTableElements, searchTerm, setIsModalOpen, setType, setAlbum_id, setIsModalQuestionOpen, setYesOptionInModal, setTrack_id})
     }
 
     return () => isRendering= false

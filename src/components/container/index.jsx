@@ -9,7 +9,7 @@ import './styles.css'
 export function Container() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isModalQuestionOpen, setIsModalQuestionOpen] = useState(false)
-  const [yesOptionInModal, setYesOptionInModal] = useState(()=>{})
+  const [yesOptionInModal, setYesOptionInModal] = useState(false)
 
   
   return (

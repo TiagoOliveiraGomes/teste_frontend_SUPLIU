@@ -10,6 +10,7 @@ import { Api } from "../service/api"
         })
         const data = await response.data
         console.log(data)
+        window.location.reload();
     } catch (error) {
         console.log(error)
     }
