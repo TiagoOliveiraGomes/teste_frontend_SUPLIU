@@ -1,6 +1,6 @@
 import { Api } from "../service/api"
 
- export async function PostTrack (album_id, number, title, duration) {
+ export async function PostTrack ({album_id, number, title, duration}) {
      console.log("na função postTrack:")
      console.log("album_id:", album_id)
      console.log("number:", number)
@@ -13,7 +13,7 @@ import { Api } from "../service/api"
             title,
             duration
         })
-        const data = response.data
+        const data = await response.data
         console.log(data)
     } catch (error) {
         console.log(error)

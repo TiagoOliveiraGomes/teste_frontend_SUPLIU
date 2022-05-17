@@ -1,5 +1,6 @@
 
 import trashIcon from '../assets/images/trash.svg'
+import { DeleteAlbums } from './DeleteAlbum';
 
 export function CreatingElementsForTable({
   albumList,
@@ -24,7 +25,7 @@ export function CreatingElementsForTable({
             
               <caption>
                 Álbum: {item.name}, {item.year}
-              <button className="btn-delete"><img className='trashIcon' src={trashIcon} /></button>
+              <button onClick={()=>DeleteAlbums(item.id)} className="btn-delete"><img className='trashIcon' src={trashIcon} /></button>
               <button onClick={()=>{
                 setType('track')
                 setIsModalOpen(true)

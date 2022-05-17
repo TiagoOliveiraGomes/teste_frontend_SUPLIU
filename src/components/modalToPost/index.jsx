@@ -4,12 +4,13 @@ import { PostAlbums } from '../../utils/PostAlbums'
 import { PostTrack } from '../../utils/PostTrack'
 import './styles.css'
 
-export function ModalToPost() {
+export function ModalToPost(props) {
+    // const {modalParams, setModalParams} = props
     const contextModal = useContext(IsModalOpenContext)
-    const {isModalOpen, setIsModalOpen, type, album_id} = contextModal
+    const {isModalOpen, setIsModalOpen, type, album_id, modalParams, setModalParams} = contextModal
 
     const [albumName, setAlbumName] = useState('')
-    const [AlbumYear, setAlbumYear] = useState(null)
+    const [albumYear, setAlbumYear] = useState(null)
 
     const [number, setNumber] = useState(null)
     const [title, setTitle] = useState('')
@@ -17,29 +18,44 @@ export function ModalToPost() {
 
     const [modalElements, setModalElement] = useState(null)
     
-// useEffect(()=> {
-//     console.log("valor do number: ", number)
-//     console.log("valor do title: ", title)
-//     console.log("valor do duration: ", duration)
-// }, [number, title, duration])
+useEffect(()=> {
+    // console.log("valor do number: ", number)
+    // console.log("valor do title: ", title)
+    // console.log("valor do duration: ", duration)
+    setModalParams({...modalParams, albumYear, albumName})
+    console.log("ModalParams: ", modalParams)
+}, [number, title, duration, albumName, albumYear])
 
     useEffect(()=>{
         if(!isModalOpen){
             setModalElement(null)
         }
         verifyFormType()
+
     },[isModalOpen])
+
+    const [clicked, setClicked] = useState(false)
+
+    useEffect(()=>{
+
+        clicked==="postAlbum" && PostAlbum()
+        // clicked==="postTrack" && CallPostTrack()
+        setClicked("")
+    }, [clicked])
     
-    function PostAlbum (event) {
-        event.preventDefault()
-        PostAlbums(albumName, AlbumYear)
+    function PostAlbum () {
+        // event.preventDefault()
+        console.log("na chamada da função name: ", albumName)
+        console.log("na chamada da função name: ", albumYear)
+        console.log("na chamada da função name: ", modalParams)
+        PostAlbums(albumName, albumYear)
     }
-    function CallPostTrack (event) {
-        event.preventDefault()
+    function CallPostTrack () {
+        
         console.log("na chamada da função number: ", number)
         console.log("na chamada da função title: ", title)
         console.log("na chamada da função duration: ", duration)
-        PostTrack(album_id, number, title, duration)
+        // PostTrack(album_id, number, title, duration)
     }
 
 
@@ -48,7 +64,8 @@ export function ModalToPost() {
         console.log(album_id)
         let element = null
         if(type==="album"){
-                element = (<form className='Container-ModalToPost' action="">
+                element = (
+                <form className='Container-ModalToPost' action="">
                         <button type='button' className='btn_close' onClick={()=>setIsModalOpen(false)}>X</button>
                         <h1 className='title'>Cadastro um novo álbum</h1>
                     <fieldset>
@@ -59,9 +76,15 @@ export function ModalToPost() {
                         <legend>Ano</legend>
                         <input type="number" placeholder='Ano do álbum' onChange={event => setAlbumYear(+event.target.value)}/>
                     </fieldset>
-                    <button className='btn-submit' type='submit' onClick={(event)=>PostAlbum(event)}>Confirmar</button>
+                    {/* //TODO:post buttons */}
+                    <button className='btn-submit' type='button' onClick={()=> {
+                        setClicked('postAlbum')
+                        // console.log("albumname:", modalParams)
+                        // PostAlbum()
+                    }}>Confirmar</button>
                 </form>)
-        }else if(type==="track"){
+        }
+        else if(type==="track"){
             element=(<form className='Container-ModalToPost' action="">
             <button type='button' className='btn_close' onClick={()=>setIsModalOpen(false)}>X</button>
             <h1 className='title'>Cadastro um novo álbum</h1>
@@ -77,7 +100,9 @@ export function ModalToPost() {
             <legend>duration</legend>
             <input type="number" placeholder='Ano do álbum' onChange={event => setDuration(+event.target.value)}/>
         </fieldset>
-        <button className='btn-submit' type='submit' onClick={(event)=>CallPostTrack(event)}>Confirmar</button>
+        <button className='btn-submit' type='button' onClick={()=>{
+            PostTrack({album_id, number, title, duration})
+        }}>Confirmar</button>
     </form>)
         }
         if(isModalOpen){

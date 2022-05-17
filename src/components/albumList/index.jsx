@@ -9,6 +9,7 @@ export function AlbumList(props) {
   const [albumList, setAlbumList] = useState(null)
   const [tableElements, setTableElements] = useState(null)
   const {searchTerm, pressSearchButton} = props
+  
 
   const contextModal = useContext(IsModalOpenContext)
   const {isModalOpen, setIsModalOpen, setType, setAlbum_id} = contextModal
