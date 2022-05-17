@@ -8,14 +8,17 @@ import './styles.css'
 
 export function Container() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalQuestionOpen, setIsModalQuestionOpen] = useState(false)
+  const [yesOptionInModal, setYesOptionInModal] = useState(()=>{})
+
   
   return (
     <div className='Container'>
       <HeaderContainer />
-      <ContainerContent />
+      <ContainerContent setIsModalQuestionOpen={setIsModalQuestionOpen} setYesOptionInModal={setYesOptionInModal} />
       <AddButton isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <ModalToPost />
-      <ModalQuestion title="ola" button1="não" button2="Sim" />
+      <ModalQuestion yesOptionInModal={yesOptionInModal} button1="não" button2="Sim" isModalQuestionOpen={isModalQuestionOpen} setIsModalQuestionOpen={setIsModalQuestionOpen}/>
     </div>
   )
 }
