@@ -1,0 +1,13 @@
+.modalQuestionContainer{
+    position: absolute;
+    top: 45%;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

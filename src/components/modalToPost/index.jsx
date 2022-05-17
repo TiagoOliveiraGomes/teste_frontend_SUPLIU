@@ -39,7 +39,7 @@ useEffect(()=> {
     useEffect(()=>{
 
         clicked==="postAlbum" && PostAlbum()
-        // clicked==="postTrack" && CallPostTrack()
+        clicked==="postTrack" && CallPostTrack()
         setClicked("")
     }, [clicked])
     
@@ -55,7 +55,7 @@ useEffect(()=> {
         console.log("na chamada da função number: ", number)
         console.log("na chamada da função title: ", title)
         console.log("na chamada da função duration: ", duration)
-        // PostTrack(album_id, number, title, duration)
+        PostTrack(album_id, number, title, duration)
     }
 
 
@@ -101,7 +101,8 @@ useEffect(()=> {
             <input type="number" placeholder='Ano do álbum' onChange={event => setDuration(+event.target.value)}/>
         </fieldset>
         <button className='btn-submit' type='button' onClick={()=>{
-            PostTrack({album_id, number, title, duration})
+            setClicked('postTrack')
+            // PostTrack({album_id, number, title, duration})
         }}>Confirmar</button>
     </form>)
         }
