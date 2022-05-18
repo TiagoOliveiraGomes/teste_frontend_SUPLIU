@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Teste_Frontend_ReactJs_SUPLIU
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>🧪Tecnologias</h2>
+<h4>Esse projeto foi desenvolvido com as seguintes tecnologias: </h4>
 
-## Available Scripts
+* [React](https://reactjs.org)
+* [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+* [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-In the project directory, you can run:
 
-### `npm start`
+# <h2>🚀 Como executar</h2>
+Clone o projeto e acesse a pasta do mesmo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```javascript
+$ git clone https://github.com/TiagoOliveiraGomes/teste_frontend_SUPLIU
+$ cd teste_frontend_SUPLIU
+```
+Para iniciá-lo, siga os passos abaixo:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# <h3>Instalar as dependências</h3>
+```javascript
+$ npm install
+```
 
-### `npm test`
+# <h3>Iniciar o projeto</h3>
+```javascript
+$ npm start
+```
+O app estará disponível no seu browser pelo endereço http://localhost:3000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# <h2>💻 Projeto</h2>
 
-### `npm run build`
+Projeto de teste para vaga na Supliu, tem funções como adicionar álbum, faixa de música do álbum, ver e pesquisar lista de álbums, deletar álbum e deletar faixa.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Imagem do site](https://user-images.githubusercontent.com/70171892/169055943-0365cddb-c1ce-4d8a-84f2-f57370f7a026.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# <h2>💻 funções disponiveis</h2>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Imagem da barra de pesquisa com o botão procurar do lado](https://user-images.githubusercontent.com/70171892/169056753-ef5cf245-2a09-405b-9684-86bd6fdef2aa.png)
+Barra de pesquisa, onde o usuário poderá digitar o nome de um álbum e filtrar álbums que contenha os caracteres digitados.
 
-### `npm run eject`
+![Imagem de dois botões lado a lado, um vermelho e um azul](https://user-images.githubusercontent.com/70171892/169058739-44a5a507-f303-41d5-aa63-827ef650f953.png)
+Cada álbum contém esses dois botões. O botão *vermelho* irá *excluir* o álbum relacionado. o botão *azul* irá *adicionar* uma nova faixa para o álbum relacionado.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Imagem da faixa de música selecionada](https://user-images.githubusercontent.com/70171892/169060283-688ddd17-c478-4a1e-a19c-9e854f39f9cf.png)
+Ao clicar sob uma faixa em um determinado álbum, abrirá um modal onde o usuário poderá excluir a faixa selecionada ou não.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Imagem do botão adicionar álbum](https://user-images.githubusercontent.com/70171892/169061086-24c48298-1700-49da-b1f1-f0244add5826.png)
+No canto inferior direito o usuário poderá adicionar um novo album ao clicar no botão "Adicionar álbum"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feito com 🧡 by Tiago Gomes 👋🏻 
