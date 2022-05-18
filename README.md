@@ -7,6 +7,7 @@
 * [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 * [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+* [Axios](https://axios-http.com/ptbr/)
 
 
 # <h2>🚀 Como executar</h2>
