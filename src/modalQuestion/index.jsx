@@ -1,13 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { IsModalOpenContext } from '../contexts/modalOpen'
 import { DeleteTrack } from '../utils/DeleteTrack'
 import './styles.css'
 
 export function ModalQuestion(props) {
-    const { button1, button2, isModalQuestionOpen, setIsModalQuestionOpen, yesOptionInModal} = props
+    const { button1, button2, isModalQuestionOpen, setIsModalQuestionOpen} = props
     const contextModal = useContext(IsModalOpenContext)
   const {track_id} = contextModal
-  console.log("trackID: ", track_id)
   return (
     <>
         {isModalQuestionOpen&&
