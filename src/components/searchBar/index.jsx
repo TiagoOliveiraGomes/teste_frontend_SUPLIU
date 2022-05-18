@@ -14,7 +14,7 @@ export default function SearchBar(props) {
         <form>
             <fieldset>
                 <legend>Digite uma palavra chave</legend>
-                    <input type="search" name='search' id='search' placeholder='Nome da música' maxLength={100} onChange={(e)=> setSearchTerm(e.target.value)}/>
+                    <input type="search" name='search' id='search' placeholder='Nome do álbum' maxLength={100} onChange={(e)=> setSearchTerm(e.target.value)}/>
                 <button onClick={searchButtonPressed} type='submit' >Procurar</button>
             </fieldset>
         </form>

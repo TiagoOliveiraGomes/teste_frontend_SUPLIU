@@ -1,3 +1,6 @@
+.AlbumList {
+    margin-bottom: 5rem;
+}
 .AlbumList  li:hover{
     background-color: rgba(124, 124, 124, 0.393);
 }

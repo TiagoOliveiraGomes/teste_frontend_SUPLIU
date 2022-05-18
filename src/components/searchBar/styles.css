@@ -31,3 +31,19 @@
     background-color: #4ab1ff;
     
 }
+
+@media (max-width: 370px){
+    .Container-SearchBar form fieldset{
+        display: flex;
+        flex-direction: column;
+    }
+    .Container-SearchBar input{
+        width: 100%;
+        height: 1rem;
+        padding: 0.8rem;
+    }
+    .Container-SearchBar button{
+        margin-top: 0.5rem;
+        width: 50%;
+    }
+}
