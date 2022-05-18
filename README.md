@@ -38,15 +38,19 @@ Projeto de teste para vaga na Supliu, tem funções como adicionar álbum, faixa
 # <h2>💻 funções disponiveis</h2>
 
 ![Imagem da barra de pesquisa com o botão procurar do lado](https://user-images.githubusercontent.com/70171892/169056753-ef5cf245-2a09-405b-9684-86bd6fdef2aa.png)
+<br/>
 Barra de pesquisa, onde o usuário poderá digitar o nome de um álbum e filtrar álbums que contenha os caracteres digitados.
 
 ![Imagem de dois botões lado a lado, um vermelho e um azul](https://user-images.githubusercontent.com/70171892/169058739-44a5a507-f303-41d5-aa63-827ef650f953.png)
-Cada álbum contém esses dois botões. O botão *vermelho* irá *excluir* o álbum relacionado. o botão *azul* irá *adicionar* uma nova faixa para o álbum relacionado.
+<br/>
+Cada álbum contém esses dois botões. O botão **vermelho** irá **excluir** o álbum relacionado. o botão **azul** irá **adicionar** uma nova faixa para o álbum relacionado.
 
 ![Imagem da faixa de música selecionada](https://user-images.githubusercontent.com/70171892/169060283-688ddd17-c478-4a1e-a19c-9e854f39f9cf.png)
+<br/>
 Ao clicar sob uma faixa em um determinado álbum, abrirá um modal onde o usuário poderá excluir a faixa selecionada ou não.
 
 ![Imagem do botão adicionar álbum](https://user-images.githubusercontent.com/70171892/169061086-24c48298-1700-49da-b1f1-f0244add5826.png)
+<br/>
 No canto inferior direito o usuário poderá adicionar um novo album ao clicar no botão "Adicionar álbum"
 
 Feito com 🧡 by Tiago Gomes 👋🏻 
